@@ -1,0 +1,394 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{913EB12A-8D0F-4751-945B-E8DB2D676645}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorkTechHub</RootNamespace>
+    <AssemblyName>WorkTechHub</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44322</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.9\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.9\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.9\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\script.sql" />
+    <Content Include="content\Bootstrap\css\bootstrap-grid.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="content\Bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="content\Bootstrap\css\bootstrap.css" />
+    <Content Include="content\Bootstrap\css\bootstrap.min.css" />
+    <Content Include="content\Bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="content\Bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="content\Bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="content\Bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="content\Bootstrap\js\bootstrap.esm.js" />
+    <Content Include="content\Bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="content\Bootstrap\js\bootstrap.js" />
+    <Content Include="content\Bootstrap\js\bootstrap.min.js" />
+    <Content Include="content\Css\aboutUs.css" />
+    <Content Include="content\Css\contactus.css" />
+    <Content Include="content\Css\developerSheet2.css" />
+    <Content Include="content\Css\developersinup.css" />
+    <Content Include="content\Css\homepage.css" />
+    <Content Include="content\Css\Managersheet3.css" />
+    <Content Include="content\Css\stylesheet1.css" />
+    <Content Include="content\images\20602917_6333187-removebg-preview.png" />
+    <Content Include="content\images\6075535.jpg" />
+    <Content Include="content\images\636d02940a5e0f4d37d82acc_12395005_Digital_Marketing_5 %281%29 %281%29.svg" />
+    <Content Include="content\images\adminlogo-removebg-preview %281%29.png" />
+    <Content Include="content\images\adminlogo.png" />
+    <Content Include="content\images\back8.gif" />
+    <Content Include="content\images\defaultboy.png" />
+    <Content Include="content\images\defaultgirl.png" />
+    <Content Include="content\images\Directions-amico.png" />
+    <Content Include="content\images\feed.png" />
+    <Content Include="content\images\Feedback %282%29.png" />
+    <Content Include="content\images\feedback.png" />
+    <Content Include="content\images\glow %281%29.png" />
+    <Content Include="content\images\glow-removebg-preview.png" />
+    <Content Include="content\images\glow.png" />
+    <Content Include="content\images\kss logo.jpg" />
+    <Content Include="content\images\ksslogonew.png" />
+    <Content Include="content\images\log1.png" />
+    <Content Include="content\images\log2.png" />
+    <Content Include="content\images\log4.png" />
+    <Content Include="content\images\login6.png" />
+    <Content Include="content\images\logobrand-removebg-preview.png" />
+    <Content Include="content\images\back2.jpg" />
+    <Content Include="content\images\logom.png" />
+    <Content Include="content\images\logom_-_Copy-removebg-preview.png" />
+    <Content Include="content\images\mayank.png" />
+    <Content Include="content\images\message.svg" />
+    <Content Include="content\images\mis1.jpg" />
+    <Content Include="content\images\mis2.jpg" />
+    <Content Include="content\images\mis3.jpg" />
+    <Content Include="content\images\mission1.png" />
+    <Content Include="content\images\mission2.png" />
+    <Content Include="content\images\mission4.png" />
+    <Content Include="content\images\myimg.jpeg" />
+    <Content Include="content\images\new gif.gif" />
+    <Content Include="content\images\noti.png" />
+    <Content Include="content\images\notification.png" />
+    <Content Include="content\images\pback.gif" />
+    <Content Include="content\images\pback2.gif" />
+    <Content Include="content\images\Programmer %282%29.gif" />
+    <Content Include="content\images\Programmer.gif" />
+    <Content Include="content\images\quest.svg" />
+    <Content Include="content\images\refresh1.png" />
+    <Content Include="content\images\Report-amico.png" />
+    <Content Include="content\images\Report.gif" />
+    <Content Include="content\images\request.png" />
+    <Content Include="content\images\Reset password-amico %281%29.png" />
+    <Content Include="content\images\Reset password-amico.png" />
+    <Content Include="content\images\Reset password-rafiki.png" />
+    <Content Include="content\images\Sign up %283%29.gif" />
+    <Content Include="content\images\Sign up-amico %281%29.png" />
+    <Content Include="content\images\Sign up-amico.png" />
+    <Content Include="content\images\Sign up.gif" />
+    <Content Include="content\images\sign-up-animate.svg" />
+    <Content Include="content\images\slider1.jpg" />
+    <Content Include="content\images\slider2.jpg" />
+    <Content Include="content\images\slider3.jpg" />
+    <Content Include="content\images\slider4.jpg" />
+    <Content Include="content\images\technology-web-services.svg" />
+    <Content Include="content\images\TechWorkPortal-logos_transparent.png" />
+    <Content Include="content\images\think1.png" />
+    <Content Include="content\images\Time management-amico.png" />
+    <Content Include="content\images\upload.png" />
+    <Content Include="content\images\upload1.png" />
+    <Content Include="content\images\uploadcode.gif" />
+    <Content Include="content\images\wel-removebg-preview.png" />
+    <Content Include="content\images\welcome.svg" />
+    <Content Include="content\images\WorkTechHub-logos_black.png" />
+    <Content Include="content\images\WorkTechHub-logos_transparent.png" />
+    <Content Include="content\images\WorkTechHub-logos_white.png" />
+    <Content Include="content\images\back1.gif" />
+    <Content Include="content\javascript\jquery-3.7.1.min.js" />
+    <Content Include="content\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\AuthorizeDeveloperAttribute.cs" />
+    <Compile Include="App_Code\AuthorizeManagerAttribute.cs" />
+    <Compile Include="App_Code\Cryptography.cs" />
+    <Compile Include="App_Code\EmailSender.cs" />
+    <Compile Include="App_Code\RandomCodeGenerator.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DeveloperController.cs" />
+    <Compile Include="Controllers\GeneralController.cs" />
+    <Compile Include="Controllers\ManagerController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DeveloperMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EnquiryMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FeedbackMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LoginMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NotificationMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProjectMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RequestMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TaskMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UploadCodeMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\WorkReportMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="content\Bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="content\Bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="content\Bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="content\Bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="content\Bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="content\Bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="content\Bootstrap\js\bootstrap.js.map" />
+    <Content Include="content\Bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="content\images\refresh.webp" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="Views\shared\common_gen_layout.cshtml" />
+    <Content Include="Views\General\AboutUs.cshtml" />
+    <Content Include="Views\General\TrendingProject.cshtml" />
+    <Content Include="Views\General\DeveloperSignUp.cshtml" />
+    <Content Include="Views\General\Contact.cshtml" />
+    <Content Include="Views\General\LogIn.cshtml" />
+    <Content Include="Views\General\Home.cshtml" />
+    <Content Include="Views\shared\Common_Developer_Layput.cshtml" />
+    <Content Include="Views\Developer\Welcome.cshtml" />
+    <Content Include="Views\Developer\Searchpro.cshtml" />
+    <Content Include="Views\Developer\MyProjects.cshtml" />
+    <Content Include="Views\Developer\TodayTask.cshtml" />
+    <Content Include="Views\Developer\UploadCode.cshtml" />
+    <Content Include="Views\Developer\RqForProject.cshtml" />
+    <Content Include="Views\Developer\MyProfilet.cshtml" />
+    <Content Include="Views\Developer\ChangePass.cshtml" />
+    <Content Include="Views\Developer\WorkReport.cshtml" />
+    <Content Include="Views\Developer\MyProfile.cshtml" />
+    <Content Include="Views\Developer\feedback.cshtml" />
+    <Content Include="Views\shared\Common_Manager_Layout.cshtml" />
+    <Content Include="Views\Manager\Dashboard.cshtml" />
+    <Content Include="Views\Manager\Postproject.cshtml" />
+    <Content Include="Views\Manager\WorkProject.cshtml" />
+    <Content Include="Views\Manager\SearchDeveloper.cshtml" />
+    <Content Include="Views\Manager\MyProjects.cshtml" />
+    <Content Include="Views\Manager\UploadTask.cshtml" />
+    <Content Include="Views\Manager\ViewReport.cshtml" />
+    <Content Include="Views\Manager\ViewDeveloper.cshtml" />
+    <Content Include="Views\Manager\EnquiryMgmt.cshtml" />
+    <Content Include="Views\Manager\ManageFeedback.cshtml" />
+    <Content Include="Views\Manager\ChangePass.cshtml" />
+    <Content Include="Views\Manager\DownloadCode.cshtml" />
+    <Content Include="Views\Manager\NotificationMgmt.cshtml" />
+    <Content Include="Views\Manager\SendEmail.cshtml" />
+    <Content Include="Views\Developer\Logout.cshtml" />
+    <Content Include="Views\Manager\Logout.cshtml" />
+    <Content Include="Views\General\myintro.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1491</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44322/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

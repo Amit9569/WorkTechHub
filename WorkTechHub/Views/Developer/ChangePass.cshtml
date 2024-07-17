@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "ChangePass";
+    Layout = "~/Views/shared/Common_Developer_Layput.cshtml";
+}
+
+<style>
+    .txt1 {
+        border-radius: 30px;
+        height: 55px;
+    }
+
+        .txt1:hover {
+            border: 3px solid #E0E0E0;
+        }
+
+    .txt2 {
+        border-radius: 30px;
+    }
+
+        .txt2:hover {
+            border: 1px solid #E0E0E0;
+        }
+
+    .feed {
+        background-color: #E3C3E9;
+        border-radius: 15px;
+        border: 2px solid #8B4E96;
+    }
+
+    .btn {
+        height: 45px;
+        width: 150px;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+    }
+
+        .btn:hover {
+            color: white;
+            transform: scale(0.9);
+        }
+        .err{
+            color:red;
+        }
+</style>
+<script>
+    $(document).ready(function () {
+        $("#btnsubmit").click(function () {
+            var currentpass, newpass, conpass, res = true;
+            //Reading the value of all controls
+            currentpass = $("#pass").val().trim();
+            newpass = $("#tpass").val().trim();
+            conpass = $("#tcpass").val().trim();
+            //clear old error
+            $(".err").remove();
+            //validate  current password
+            if (currentpass.length == 0) {
+                $("#pass").after("<span class='err'>Please enter your current password.</span>");
+                res = false;
+            }
+            //validate  new password
+            if (newpass.length == 0) {
+                $("#tpass").after("<span class='err'>Please enter your password.</span>");
+                res = false;
+            }
+            else if (newpass.length < 5) {
+                $("#tpass").after("<span class='err'>Password must have 5 characters.</span>");
+                res = false;
+            }
+            //validate confirm password
+            if (conpass.length == 0) {
+                $("#tcpass").after("<span class='err'>Please confirm your password.</span>");
+                res = false;
+            }
+            else if (conpass != newpass) {
+                $("#tcpass").after("<span class='err'>Password and confirm password must be same.</span>");
+                res = false;
+            }
+            return res;
+        });
+    });
+</script>
+
+<div class="row mb-5">
+
+
+    <div class="col-sm-1"></div>
+    <div class="col-md-6">
+        <img src="~/content/images/Reset password-amico (1).png" min-height="600px" width="90%" />
+    </div>
+    <div class="col-md-4  mt-5 mb-5 feed" style=" border-radius:10px; min-height:530px;">
+        <h1 class="card-header text-primary text-center">Change Password</h1><hr />
+        <h6 style="text-align:center; color:darkred;">@ViewBag.message</h6>
+
+        <form action="/Developer/ChangePass" method="post">
+            <div class="mb-3">
+                <label for="Current Password" class="form-label">Current Password </label>
+                <input type="password" class="form-control txt1" id="pass" placeholder="Enter current password" name="Pass_word">
+            </div>
+            <div class="mb-3">
+                <label for="New Password" class="form-label">New Password</label>
+                <input type="password" class="form-control txt1" id="tpass" placeholder="Enter New password" name="NewPass">
+            </div>
+            <div class="mb-3">
+                <label for="Conform Password" class="form-label">Conform Password</label>
+                <input type="password" class="form-control txt1" id="tcpass" placeholder="Enter Conform password" name="ConfPass">
+            </div>
+            <input type="submit" value="update" id="btnsubmit" class="btn btn-primary mt-2 mb-3" />
+        </form>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+

@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/shared/common_gen_layout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn
+      +CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link href="~/content/Css/contactus.css" rel="stylesheet" />
+<script src="~/content/javascript/jquery-3.7.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#bttn").click(function () {
+            alert("ok");
+            var name, email, mobno, msg;
+            name = $("#Ename").val();
+            email = $("#EEmail").val();
+            mobno = $("#Enum").val();
+            msg = $("#Emess").val();
+            var obj = { Name: name, EmailId: email, MobNo: mobno, Query: msg };
+            $.getJSON("/General/SaveEnquiryByAJAX", obj, function (result) {
+                if (result == "SUCCESS") {
+                    alert("Enquiry saved successfully.");
+                    $("#btnclose").trigger("click");
+                    $("#Ename").val("");
+                    $("#EEmail").val("");
+                    $("#Enum").val("");
+                    $("#Emess").val("");
+                }
+                else {
+                    alert("Sorry unable to save enquiry");
+                }
+            });
+        });
+    });
+</script>
+
+<div class="row">
+    <div class="colo-sm-1"></div>
+    <div class="colo-sm-10">
+        <h1 class=" font-weight-bold text-center my-4"><u style="border-radius:10px;">Contact us</u></h1>
+        <h4><span id="sp1"> </span></h4>
+        <!--Section description-->
+
+    </div>
+    <div class="colo-sm-1"></div>
+</div>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4  mt-5 mb-5 " style="background-color: #F9F9FA; margin-right: 10px; ">
+
+        <!--Social media session start-->
+    <div class="col-sm-12">
+        <h3>Reach Out</h3>
+
+        <span>
+            <a href="mailto:amit974403727250@gmail.com" target="_blank" id="a1">
+                <i class="fa-solid fa-square-envelope  mt-4" id="icon1" style="color: #ffd43b; "></i>&emsp;Click for Email
+            </a><br />
+            <a href="" target="_blank" id="a1">
+                <i class="fa-solid fa-phone-volume mt-5" style=" color: #3776e1;" id="icon1"></i>&emsp;9569683207
+            </a><br />
+            <a href="https://wa.me/19569683207" target="_blank" id="a1">
+                <i class="fa-brands fa-whatsapp  mt-5" style="  color: #00a303; " id="icon1"></i>&emsp;Click To Chat
+            </a><br />
+
+            <a href="https://www.facebook.com/profile.php?id=100042495376331&mibextid=ZbWKwL" target="_blank" id="a1">
+                <i class="fa-brands fa-square-facebook  mt-5" id="icon1" style="color: #2474ff;"></i> &emsp; Facebook
+            </a><br />
+                <a href="https://www.linkedin.com/in/amit-kumar-yadav-69923828a" target="_blank" id="a1">
+                    <i class="fa-brands fa-linkedin fa-2xl  " id="icon1" style="color: #2474ff; margin-top:85px;"></i> &emsp; Linkdin
+                </a><br />
+            <a href="https://twitter.com/Er_amit_yadav11" target="_blank" id="a1">
+                <i class="fa-brands fa-twitter mt-5" style=" color: #45bfe8; " id="icon1"></i>&emsp;Twitter
+            </a><br />
+        </span>
+    </div>
+       </div>
+ <div class="col-sm-6 mt-5 mb-5" style="background-color: #F9F9FA; border-top: 2px #54B4D3 solid; border-bottom: 2px #54B4D3 solid; ">
+        <form>
+
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Name:</label>
+                <input type="text" name="Name" class="form-control txt2" id="Ename" required style=" height:50px;">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Emaid Id:</label>
+                <input type="email" name="EmailId" class="form-control txt2" id="EEmail" required style=" height:50px;">
+            </div>
+            <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Mobile No:</label>
+                <input type="number" name="MobNo" class="form-control txt2" id="Enum" required style=" height:50px;">
+            </div>
+            <div class="mb-3">
+                <label for="message-text" class="col-form-label">Query:</label>
+                <textarea class="form-control txt2" id="Emess" required rows="6"></textarea>
+            </div>
+
+            <div class="">
+               <!-- <button type="button" id="btnclose" class="btn btn-danger" data-bs-dismiss="modal" style="height:40px; width:200px; ">Close</button>-->
+                <button type="submit" class="btn btn-primary ;" id="bttn" style="margin-bottom:20px;  ">Send Message</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-sm-1"></div>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <span>
+            <h6>Our Office</h6>
+        <h2 class="mb-4">Conviently Located</h2>
+        </span>
+        <div id="map-container-google-1" class="z-depth-1-half map-container" style="height:400px; width:100%; margin-bottom:100px;">
+            <iframe src="https://maps.google.com/maps?q=kamadgirisoftwaresolution&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                   allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+

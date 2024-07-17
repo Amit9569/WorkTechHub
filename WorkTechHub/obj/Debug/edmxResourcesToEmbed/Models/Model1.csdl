@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WorkTechHubDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="DeveloperMaster">
+    <Key>
+      <PropertyRef Name="Email_Id" />
+    </Key>
+    <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Email_Id" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mobile_No" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Qualification" Type="String" MaxLength="90" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Designation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ProfilePic" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Registered_on" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="FeedbackMasters" Relationship="Self.FK_FeedbackMaster_DeveloperMaster" FromRole="DeveloperMaster" ToRole="FeedbackMaster" />
+    <NavigationProperty Name="RequestMasters" Relationship="Self.FK_RequestMaster_DeveloperMaster" FromRole="DeveloperMaster" ToRole="RequestMaster" />
+    <NavigationProperty Name="TaskMasters" Relationship="Self.FK_TaskMaster_DeveloperMaster" FromRole="DeveloperMaster" ToRole="TaskMaster" />
+    <NavigationProperty Name="UploadCodeMasters" Relationship="Self.FK_UploadCodeMaster_DeveloperMaster" FromRole="DeveloperMaster" ToRole="UploadCodeMaster" />
+    <NavigationProperty Name="WorkReportMasters" Relationship="Self.FK_WorkReportMaster_DeveloperMaster" FromRole="DeveloperMaster" ToRole="WorkReportMaster" />
+  </EntityType>
+  <EntityType Name="EnquiryMaster">
+    <Key>
+      <PropertyRef Name="Enq_Id" />
+    </Key>
+    <Property Name="Enq_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MobNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Query" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Enq_DT" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="FeedbackMaster">
+    <Key>
+      <PropertyRef Name="Fid" />
+    </Key>
+    <Property Name="Fid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Feedback_Title" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="Feedback_detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Developerid" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="MsgDT" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="DeveloperMaster" Relationship="Self.FK_FeedbackMaster_DeveloperMaster" FromRole="FeedbackMaster" ToRole="DeveloperMaster" />
+  </EntityType>
+  <EntityType Name="LoginMaster">
+    <Key>
+      <PropertyRef Name="Email_Id" />
+    </Key>
+    <Property Name="Email_Id" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pass_word" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Utype" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="NotificationMaster">
+    <Key>
+      <PropertyRef Name="Nid" />
+    </Key>
+    <Property Name="Nid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NMsg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="NDT" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="ProjectMaster">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Deadline" Type="DateTime" Precision="3" />
+    <Property Name="Descripition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProjectFile" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="PostedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="RequestMasters" Relationship="Self.FK_RequestMaster_ProjectMaster" FromRole="ProjectMaster" ToRole="RequestMaster" />
+  </EntityType>
+  <EntityType Name="RequestMaster">
+    <Key>
+      <PropertyRef Name="RequestId" />
+    </Key>
+    <Property Name="RequestId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RequestedFor" Type="Int32" />
+    <Property Name="RequestMsg" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="RequestedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="RequestDt" Type="DateTime" Precision="3" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="DeveloperMaster" Relationship="Self.FK_RequestMaster_DeveloperMaster" FromRole="RequestMaster" ToRole="DeveloperMaster" />
+    <NavigationProperty Name="ProjectMaster" Relationship="Self.FK_RequestMaster_ProjectMaster" FromRole="RequestMaster" ToRole="ProjectMaster" />
+  </EntityType>
+  <EntityType Name="TaskMaster">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ForDeveloper" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ForDate" Type="DateTime" Precision="3" />
+    <Property Name="TaskTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="TaskDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="TaskFile" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="DeveloperMaster" Relationship="Self.FK_TaskMaster_DeveloperMaster" FromRole="TaskMaster" ToRole="DeveloperMaster" />
+  </EntityType>
+  <EntityType Name="UploadCodeMaster">
+    <Key>
+      <PropertyRef Name="UploadId" />
+    </Key>
+    <Property Name="UploadId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Descripition" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CodeFileName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="UploadedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="DeveloperMaster" Relationship="Self.FK_UploadCodeMaster_DeveloperMaster" FromRole="UploadCodeMaster" ToRole="DeveloperMaster" />
+  </EntityType>
+  <EntityType Name="WorkReportMaster">
+    <Key>
+      <PropertyRef Name="ReportId" />
+    </Key>
+    <Property Name="ReportId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="WorkDate" Type="DateTime" Precision="3" />
+    <Property Name="IsHelpNeeded" Type="Boolean" />
+    <Property Name="SubmittedBy" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SubmittedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="DeveloperMaster" Relationship="Self.FK_WorkReportMaster_DeveloperMaster" FromRole="WorkReportMaster" ToRole="DeveloperMaster" />
+  </EntityType>
+  <Association Name="FK_FeedbackMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FeedbackMaster" Type="Self.FeedbackMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="FeedbackMaster">
+        <PropertyRef Name="Developerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RequestMaster" Type="Self.RequestMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="RequestMaster">
+        <PropertyRef Name="RequestedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TaskMaster" Type="Self.TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="TaskMaster">
+        <PropertyRef Name="ForDeveloper" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UploadCodeMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UploadCodeMaster" Type="Self.UploadCodeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="UploadCodeMaster">
+        <PropertyRef Name="UploadedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkReportMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkReportMaster" Type="Self.WorkReportMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="WorkReportMaster">
+        <PropertyRef Name="SubmittedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestMaster_ProjectMaster">
+    <End Role="ProjectMaster" Type="Self.ProjectMaster" Multiplicity="0..1" />
+    <End Role="RequestMaster" Type="Self.RequestMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectMaster">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="RequestMaster">
+        <PropertyRef Name="RequestedFor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WorkTechHubDBEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DeveloperMasters" EntityType="Self.DeveloperMaster" />
+    <EntitySet Name="EnquiryMasters" EntityType="Self.EnquiryMaster" />
+    <EntitySet Name="FeedbackMasters" EntityType="Self.FeedbackMaster" />
+    <EntitySet Name="LoginMasters" EntityType="Self.LoginMaster" />
+    <EntitySet Name="NotificationMasters" EntityType="Self.NotificationMaster" />
+    <EntitySet Name="ProjectMasters" EntityType="Self.ProjectMaster" />
+    <EntitySet Name="RequestMasters" EntityType="Self.RequestMaster" />
+    <EntitySet Name="TaskMasters" EntityType="Self.TaskMaster" />
+    <EntitySet Name="UploadCodeMasters" EntityType="Self.UploadCodeMaster" />
+    <EntitySet Name="WorkReportMasters" EntityType="Self.WorkReportMaster" />
+    <AssociationSet Name="FK_FeedbackMaster_DeveloperMaster" Association="Self.FK_FeedbackMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMasters" />
+      <End Role="FeedbackMaster" EntitySet="FeedbackMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestMaster_DeveloperMaster" Association="Self.FK_RequestMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMasters" />
+      <End Role="RequestMaster" EntitySet="RequestMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskMaster_DeveloperMaster" Association="Self.FK_TaskMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMasters" />
+      <End Role="TaskMaster" EntitySet="TaskMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UploadCodeMaster_DeveloperMaster" Association="Self.FK_UploadCodeMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMasters" />
+      <End Role="UploadCodeMaster" EntitySet="UploadCodeMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkReportMaster_DeveloperMaster" Association="Self.FK_WorkReportMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMasters" />
+      <End Role="WorkReportMaster" EntitySet="WorkReportMasters" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestMaster_ProjectMaster" Association="Self.FK_RequestMaster_ProjectMaster">
+      <End Role="ProjectMaster" EntitySet="ProjectMasters" />
+      <End Role="RequestMaster" EntitySet="RequestMasters" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

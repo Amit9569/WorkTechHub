@@ -1,0 +1,99 @@
+﻿
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/shared/common_gen_layout.cshtml";
+}
+<style>
+    .login {
+        border: 1px solid #3B71Ca;
+        border-radius: 30px;
+        background-color: #F9F9FA;
+        height: 490px;
+        margin-top: 50px;
+    }
+
+    .mylogin {
+        height: 60px;
+        border-radius: 20px;
+    }
+
+    #mylogin:hover {
+        border: 2px solid #5A2A9C;
+    }
+
+    .btnlog {
+        height: 45px;
+        width: 130px;
+        align-items: center;
+        border-radius: 20px;
+        transition: 0.5s all ease-in-out;
+        font-size: 20px;
+        background-color: #3B71CA;
+        color: white;
+    }
+
+        .btnlog:hover {
+            background-color: #5A2A9C;
+            transform: scale(0.9);
+            color: white;
+        }
+
+    .err {
+        color: red;
+    }
+</style>
+<div class="row mt-5 " style="padding-bottom:80px;">
+    <div class="col-sm-1"></div>
+    <div class="col-md-5">
+        <img src="~/content/images/sign-up-animate.svg" height="100%" width="100%">
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-md-4  login">
+        <h2 class=" pt-3 pb-1 text-center ">Login here...</h2>
+        <form action="/General/LogIn" method="post">
+            <input type="email" name="Email_Id" class="form-control mylogin" placeholder="Enter email id:" id="temail" /><br />
+            <input type="password" name="Pass_word" class="form-control mylogin" placeholder="Enter password:" id="tpass" /><br />
+            <select name="Utype" class="form-control mylogin" id="utype">
+                <option value="">--Select User Type--</option>
+                <option value="DEVELOPER">Developer</option>
+                <option value="ADMIN">Admin</option>
+            </select><br />
+            <p class="text-center h5 text-danger">@ViewBag.Message</p>
+            <input type="submit" value="Login" class="form-control btnlog" id="btnlogin" />
+            <h6 class="mt-5 text-center">Don,t have an account yet? <a href="/General/DeveloperSignUp" style="text-decoration:none;">Sign Up</a></h6>
+        </form>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#btnlogin").click(function () {
+            var email, pass, type, res = true;
+            email = $("#temail").val().trim();
+            pass = $("#tpass").val().trim();
+            type = $("#utype").val().trim();
+            //Clear all old error
+            $(".err").remove();
+            //Validate email id or user id
+            if (email.length == 0) {
+                $("#temail").after("<span class='err'>Please enter your email id.</span>");
+                res = false;
+            }
+            //validate password
+            if (pass.length == 0) {
+                $("#tpass").after("<span class='err'>Please enter your password.</span>");
+                res = false;
+            }
+            //validate usertype
+            if (type.length == 0) {
+                $("#utype").after("<span class='err'>Please select a user type.</span>");
+                res = false;
+            }
+            return res;
+        });
+    });
+</script>
+
+
+

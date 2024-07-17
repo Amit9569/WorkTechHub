@@ -1,0 +1,124 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/shared/Common_Manager_Layout.cshtml";
+}
+<style>
+    .box2{
+        transition:0.5s all ease-out;
+    }
+    .box2:hover{
+        transform:scale(1.1);
+    }
+</style>
+
+<div class="row" style="min-height:500px;">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10" style=" padding-top:25px; padding-bottom:25px;">
+        <div class="row">
+            <div class="col-sm-4 box2">
+                <div class="row" style="margin-top: 10px; height: 200px; ">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color:#E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/NotificationMgmt" class="fa-solid fa-bell" style=" font-size:100px; text-decoration:none;" title="Feedback"></a><br />
+                        <span style="font-size:20px;"> Manage Notification  </span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="col-sm-4 box2">
+                <div class="row" style="margin-top: 10px; height: 200px;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color: #E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/MyProjects" class="fa-solid fa-diagram-project" style=" font-size:100px; text-decoration:none;" title="My project"></a><br />
+                        <span style="font-size:20px;">My Project</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="col-sm-4 box2">
+                <div class="row" style="margin-top: 10px; height: 200px;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color: #E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/UploadTask" class="fa-solid fa-arrow-up-from-bracket" style=" font-size:100px; text-decoration:none;" title="Upload today Task"></a><br />
+                        <span style="font-size:20px;">Upload Task</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+        <!--Srtarting second row-->
+        <div class="row " style="margin-top: 40px; border-radius: 30px; ">
+            <div class="col-sm-4 box2 ">
+                <div class="row" style="margin-top: 10px; height: 200px;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color: #E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/ManageFeedback" class="fa-regular fa-message" style=" font-size:100px; text-decoration:none;" title="Manage Feedback"></a><br />
+                        <span style="font-size:20px;">Manage Feedback</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="col-sm-4 box2">
+                <div class="row" style="margin-top: 10px; height: 200px;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color: #E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/ChangePass" class="fa-solid fa-key" style=" font-size:100px; text-decoration:none;" title="change Pasword"></a><br />
+                        <span style="font-size:20px;">Change Password</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="col-sm-4 box2">
+                <div class="row" style="margin-top: 10px; height: 200px;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color: #E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/ViewDeveloper" class="fa-solid fa-address-card" style=" font-size:100px; text-decoration:none;" title="View Developer"></a><br />
+                        <span style="font-size:20px;">View Developer</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+
+        </div>
+        <!--Srtarting third row-->
+
+        <div class="row " style="margin-top: 40px; border-radius: 30px; ">
+            <div class="col-sm-4 box2">
+                <div class="row" style="margin-top: 10px; height: 200px;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color: #E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/SendEmail" class="fa-solid fa-envelope-circle-check" style=" font-size:100px; text-decoration:none;" title="Send Email"></a><br />
+                        <span style="font-size:20px;">Send Email</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="col-sm-4 box2">
+                <div class="row" style="margin-top: 10px; height: 200px;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color: #E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/ChangePass" class="fa-solid fa-unlock-keyhole" style=" font-size:100px; text-decoration:none;" title="change Pasword"></a><br />
+                        <span style="font-size:20px;">Change Password</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+            <div class="col-sm-4 box2">
+                <div class="row" style="margin-top: 10px; height: 200px;">
+                    <div class="col-sm-2"></div>
+                    <div class="col-sm-9 text-center" style="padding-top: 30px; padding-bottom: 10px; background-color: #E1BEE7; border-radius: 20px;">
+                        <a href="/Manager/Logout" class="fa-solid fa-right-from-bracket" style=" font-size:100px; text-decoration:none;" title="Logout"></a><br />
+                        <span style="font-size:20px;">Logout</span>
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+
+

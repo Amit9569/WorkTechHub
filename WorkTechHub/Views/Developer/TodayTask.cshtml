@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "TodayTask";
+    Layout = "~/Views/shared/Common_Developer_Layput.cshtml";
+}
+
+@using WorkTechHub.Models
+@model IEnumerable<TaskMaster>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 mt-5">
+        <h1 class="text-center pt-2 pb-2 " style="background-color: #AB47BC; color:#FFF; border-radius:10px 10px 0px 0px ;">Todays Task</h1>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 table-responsive " style=" padding-top: 10px; padding-bottom: 10px; margin-bottom: 20px;">
+
+        <table class="table table-striped  table-bordered" style="border: 1px solid #9C27B0;">
+            <tr>
+                <th>SNo</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Deadline</th>
+                <th>Uploaded On</th>
+
+                <th>Download</th>
+            </tr>
+            @{
+                int sno = 1;
+                foreach (TaskMaster tm in Model)
+                {
+
+                    <tr>
+                        <td style="background-color: #F3E5F5;">@sno</td>
+                        <td style="background-color: #F3E5F5;">@tm.TaskTitle</td>
+                        <td style="background-color: #F3E5F5;">@tm.TaskDescription</td>
+                        <td style="background-color: #F3E5F5;">@tm.ForDate</td>
+                        <td style="background-color: #F3E5F5;">@tm.UploadedOn</td>
+
+
+                        <td style="background-color: #F3E5F5;">
+                            <a href="/Developer/DownloadTask?fname=@tm.TaskFile">
+                                <span class=" fa-solid fa-file-arrow-down text-center" style="cursor:pointer; padding-left:30px;" title="Download"></span>
+                            </a>
+                        </td>
+                    </tr>
+                    sno++;
+
+                }
+            }
+        </table>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+

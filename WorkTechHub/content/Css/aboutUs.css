@@ -1,0 +1,40 @@
+﻿#getit {
+    background-color: #FDD742;
+    min-height: 50px;
+    min-width: 30%;
+    border-radius: 10px;
+    transition: 0.5s all ease-in-out;
+}
+#getit:hover{
+    transform:scale(0.9);
+    
+}
+#question{
+    background-color: #5E5E5E;
+    color: #0B0A33;
+   border-radius:30px 0px 0px 30px;
+   font-size:20px;
+  
+}
+#questionimg{
+    border-radius: 0px 30px 30px 0px ;
+}
+#cont {
+    background-color: #3B71CA;
+    min-height: 60px;
+    min-width: 30%;
+    border-radius: 30px;
+    transition: 0.5s all ease-in;
+    border: none;
+    margin-left: 70px;
+    color:#FFF;
+    font-size:17px;
+}
+
+    #cont:hover {
+        transform: scale(0.9);
+    }
+.keyfe {
+    font-size:18px;
+    text-align:justify;
+}

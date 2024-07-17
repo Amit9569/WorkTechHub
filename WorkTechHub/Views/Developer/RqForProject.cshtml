@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "RqForProject";
+    Layout = "~/Views/shared/Common_Developer_Layput.cshtml";
+}
+<style>
+    .uptxt2 {
+        border-radius: 30px;
+    }
+
+        .uptxt2:hover {
+            border: 3px solid #E0E0E0;
+        }
+
+    .uploadfeed {
+        background-color: #E3C3E9;
+        border-radius: 15px;
+        border: 2px solid #8B4E96;
+        margin-top:100px;
+        height:400px;
+    }
+
+    .upbtn {
+        height: 45px;
+        width: 150px;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+    }
+
+        .upbtn:hover {
+            color: white;
+            transform: scale(0.9);
+        }
+</style>
+
+<div class="row mb-5">
+
+
+    <div class="col-sm-1"></div>
+    <div class="col-md-6">
+        <img src="~/content/images/request.png" min-height="600px" width="100%" />
+    </div>
+
+    <div class="col-md-4  mb-6 uploadfeed">
+        <h2 class="card-header mt-4 text-primary text-center">Project Request</h2>
+        <h5 class=" text-danger text-center">@TempData["Message"]</h5>
+        <hr />
+
+
+        <form action="/Developer/RqForProject" method="post">
+            <input type="hidden" name="RequestedFor" value="@Request["id"]" />
+            <div class="mb-3">
+                <label for="Descripition of the work" class="form-label">Message</label>
+                <textarea class="form-control uptxt2" name="RequestMsg" rows="6" placeholder="Say somethng /Request message"></textarea>
+            </div>
+
+            <input type="submit" value="Submit Request" class="btn btn-primary mt-2 mb-3 upbtn" />
+        </form>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+

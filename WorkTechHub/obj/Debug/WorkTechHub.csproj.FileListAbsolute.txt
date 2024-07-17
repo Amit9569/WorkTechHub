@@ -1,0 +1,224 @@
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\WorkTechHub.dll.config
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\WorkTechHub.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\WorkTechHub.pdb
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csc.exe
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csc.exe.config
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csc.rsp
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csi.exe
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csi.exe.config
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csi.rsp
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Managed.Core.targets
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.AppContext.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Collections.Immutable.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Console.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Globalization.Calendars.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.Compression.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.FileSystem.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Net.Http.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Net.Sockets.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Reflection.Metadata.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.ValueTuple.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XmlDocument.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XPath.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.exe
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.exe.config
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.rsp
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\VBCSCompiler.exe
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\roslyn\VBCSCompiler.exe.config
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\Microsoft.Web.Infrastructure.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Helpers.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Mvc.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Razor.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Deployment.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Razor.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Razor.xml
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.xml
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Deployment.xml
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Razor.xml
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Helpers.xml
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Mvc.xml
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.AssemblyReference.cache
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.CoreCompileInputs.cache
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.CopyComplete
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.dll
+D:\summer training\csharp\MVC framework\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.pdb
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\WorkTechHub.dll.config
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\WorkTechHub.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\WorkTechHub.pdb
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csc.exe
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csc.exe.config
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csc.rsp
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csi.exe
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csi.exe.config
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\csi.rsp
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Managed.Core.targets
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.AppContext.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Collections.Immutable.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Console.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Globalization.Calendars.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.Compression.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.FileSystem.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Net.Http.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Net.Sockets.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Reflection.Metadata.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.ValueTuple.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XmlDocument.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XPath.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.exe
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.exe.config
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.rsp
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\VBCSCompiler.exe
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\roslyn\VBCSCompiler.exe.config
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\Microsoft.Web.Infrastructure.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Helpers.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Mvc.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Razor.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Deployment.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Razor.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Razor.xml
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.xml
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Deployment.xml
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Razor.xml
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Helpers.xml
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\System.Web.Mvc.xml
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\project\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.AssemblyReference.cache
+D:\project\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.CoreCompileInputs.cache
+D:\project\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.CopyComplete
+D:\project\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.pdb
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\EntityFramework.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\EntityFramework.SqlServer.dll
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\EntityFramework.xml
+D:\project\summer project\WorkTechHub\WorkTechHub\bin\EntityFramework.SqlServer.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\WorkTechHub.dll.config
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\WorkTechHub.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\WorkTechHub.pdb
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\csc.exe
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\csc.exe.config
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\csc.rsp
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\csi.exe
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\csi.exe.config
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\csi.rsp
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Managed.Core.targets
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.AppContext.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Collections.Immutable.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Console.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Globalization.Calendars.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.Compression.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.FileSystem.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Net.Http.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Net.Sockets.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Reflection.Metadata.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.ValueTuple.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XmlDocument.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XPath.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.exe
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.exe.config
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\vbc.rsp
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\VBCSCompiler.exe
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\roslyn\VBCSCompiler.exe.config
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\EntityFramework.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\EntityFramework.SqlServer.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\Microsoft.Web.Infrastructure.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Helpers.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Mvc.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Razor.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Deployment.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Razor.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\EntityFramework.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\EntityFramework.SqlServer.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Razor.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Deployment.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Webpages.Razor.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Helpers.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\System.Web.Mvc.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\project\backup_project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.AssemblyReference.cache
+D:\project\backup_project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.CoreCompileInputs.cache
+D:\project\backup_project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.csproj.CopyComplete
+D:\project\backup_project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.dll
+D:\project\backup_project\WorkTechHub\WorkTechHub\obj\Debug\WorkTechHub.pdb

@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "ViewReport";
+    Layout = "~/Views/shared/Common_Manager_Layout.cshtml";
+}
+
+@using WorkTechHub.Models
+@model IEnumerable<WorkReportMaster>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 mt-5">
+        <h1 class="text-center pt-2 pb-1 " style="background-color: #AB47BC; color:#FFF; border-radius:10px 10px 0px 0px ;">Work Report</h1>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 mb-4 table-responsive">
+        
+        <table class="table table-striped table-bordered" style="border:1px solid #9C27B0; ">
+            <tr>
+                <th  style="background-color: #F3E5F5">ReportId</th>
+                <th  style="background-color: #F3E5F5">Title</th>
+                <th  style="background-color: #F3E5F5">Description</th>
+                <th  style="background-color: #F3E5F5">WorkDate</th>
+                <th  style="background-color: #F3E5F5">Is Help Need</th>
+                <th style="background-color: #F3E5F5">Submitted By</th>
+                <th style="background-color: #F3E5F5">Submitted On</th>
+            </tr>
+            @{
+
+                foreach (WorkReportMaster wm in Model)
+                {
+
+                    <tr>
+                        <td  style="background-color: #F3E5F5">@wm.ReportId</td>
+                        <td class="text-center"  style="background-color: #F3E5F5">@wm.Title</td>
+                        <td  style="background-color: #F3E5F5">@wm.Description</td>
+                        <td  style="background-color: #F3E5F5">@wm.WorkDate</td>
+                        <td  style="background-color: #F3E5F5">@wm.IsHelpNeeded</td>
+                        <td  style="background-color: #F3E5F5">@wm.DeveloperMaster.Email_Id</td>
+                        <td  style="background-color: #F3E5F5">@wm.SubmittedOn</td>
+                    </tr>
+                }
+
+
+            }
+        </table>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+

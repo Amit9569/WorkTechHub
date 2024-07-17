@@ -1,0 +1,152 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/content/javascript/jquery-3.7.1.min.js"></script>
+    <script src="~/content/Bootstrap/js/bootstrap.min.js"></script>
+    <link href="~/content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+   
+    <title>Welcome to DeveloperZone</title>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+
+        .nav-item {
+            padding-left: 19px;
+            font-size: 15px;
+            text-decoration: none;
+            
+        }
+
+        .nav-link {
+            color: #FFF;
+        }
+
+            .nav-link:hover {
+                color: #3B71CA;
+            }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid ">
+        <div class="row header " style="background-color: #7B1FA2; ">
+            <div class="col-sm-2 logo p-0 m-0 text-center">
+                <img src="~/Content/Images/glow-removebg-preview.png" style="height:80%;width:60%; " />
+            </div>
+            <div class="col-sm-7">
+                <h1 class="card-header text-center pt-5 text-light">Welcome To Admin Zone</h1>
+            </div>
+            <div class="col-sm-3 text-center">
+                <img src="~/content/images/defaultboy.png" height="180px" width="70%"/>
+            </div>
+      
+            
+        </div>
+        <div class="row menu ">
+            
+            <div class="col-sm-12 " style="background-color:#0B0A33; margin-right:0px; ">
+                <nav class="navbar navbar-expand-lg navbar-dark   ">
+                    <div class="container-fluid ">
+
+                        <button class="navbar-toggler text-light"  type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+
+                            <ul class="navbar-nav ">
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("Dashboard", "Dashboard", "Manager", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("Post a Project ", "Postproject", "Manager", new { @class = "nav-link" })
+                                </li>
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("Work Request", "WorkProject", "Manager", new { @class = "nav-link" })
+                                </li>
+                                
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("My Projects", "MyProjects", "Manager", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("Upload Today Task", "UploadTask", "Manager", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("View Work Report", "ViewReport", "Manager", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("View Developer", "ViewDeveloper", "Manager", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("Download Code", "DownloadCode", "Manager", new { @class = "nav-link " })
+                                </li>
+                            
+                                
+                                <!--Dropdown start-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Manage</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li> @Html.ActionLink("Manage Feedback", "ManageFeedback", "Manager", new { @class = "nav-link active", style = "color:black;" })</li>
+                                        <li> @Html.ActionLink("Enquiry Management", "EnquiryMgmt", "Manager", new { @class = "nav-link active", style = "color:black;" }) </li>
+                                        <li> @Html.ActionLink("Notification Management", "NotificationMgmt", "Manager", new { @class = "nav-link active", style = "color:black;" })</li>
+                                    </ul>
+                                </li>
+                                <!--Dropdown end-->
+                                <!--Dropdown start-->
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Setting</a>
+                                    <ul class="dropdown-menu">
+
+                                        <li> @Html.ActionLink("Change Password", "ChangePass", "Manager", new { @class = "dropdown-item", style = "color:black;" })</li>
+                                        <li> @Html.ActionLink("Logout", "Logout", "Manager", new { @class = "dropdown-item", style = "color:black;" })</li>
+                                        <li> @Html.ActionLink("Send Email", "SendEmail", "Manager", new { @class = "dropdown-item", style = "color:black;" })</li>
+                                    </ul>
+                                </li>
+                                <!--Dropdown end-->
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+        </div>
+        <div class="row main ">
+            <div class="col-sm-12 menu "style=" min-height:500px;">
+                @RenderBody()
+            </div>
+        </div>
+        <!--Footer Part start-->
+        <div class="row bg-dark text-center pt-3 " style="color:aliceblue; min-height:50px">
+            <div class="col-sm-6">Copyright © WorkTechHub 2023. All Rights Reserved.</div>
+            <div class="col-sm-6">Design & Developed by Er. Amit Kumar Yadav</div>
+        </div>
+
+        <!--Footer Part end-->
+    </div>
+</body>
+</html>

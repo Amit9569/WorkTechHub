@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="WorkTechHubDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DeveloperMaster">
+    <Key>
+      <PropertyRef Name="Email_Id" />
+    </Key>
+    <Property Name="Name" Type="varchar" MaxLength="200" />
+    <Property Name="Email_Id" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Mobile_No" Type="varchar" MaxLength="15" />
+    <Property Name="Qualification" Type="varchar" MaxLength="90" />
+    <Property Name="Gender" Type="varchar" MaxLength="15" />
+    <Property Name="Address" Type="varchar" MaxLength="300" />
+    <Property Name="Designation" Type="varchar" MaxLength="150" />
+    <Property Name="ProfilePic" Type="varchar" MaxLength="300" />
+    <Property Name="Registered_on" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EnquiryMaster">
+    <Key>
+      <PropertyRef Name="Enq_Id" />
+    </Key>
+    <Property Name="Enq_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" MaxLength="100" />
+    <Property Name="MobNo" Type="varchar" MaxLength="30" />
+    <Property Name="Query" Type="varchar(max)" />
+    <Property Name="Enq_DT" Type="datetime" />
+  </EntityType>
+  <EntityType Name="FeedbackMaster">
+    <Key>
+      <PropertyRef Name="Fid" />
+    </Key>
+    <Property Name="Fid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Feedback_Title" Type="varchar" MaxLength="70" />
+    <Property Name="Feedback_detail" Type="varchar(max)" />
+    <Property Name="Developerid" Type="varchar" MaxLength="150" />
+    <Property Name="MsgDT" Type="datetime" />
+  </EntityType>
+  <EntityType Name="LoginMaster">
+    <Key>
+      <PropertyRef Name="Email_Id" />
+    </Key>
+    <Property Name="Email_Id" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Pass_word" Type="varchar" MaxLength="200" />
+    <Property Name="Utype" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="NotificationMaster">
+    <Key>
+      <PropertyRef Name="Nid" />
+    </Key>
+    <Property Name="Nid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NMsg" Type="varchar(max)" />
+    <Property Name="NDT" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="ProjectMaster">
+    <Key>
+      <PropertyRef Name="ProjectId" />
+    </Key>
+    <Property Name="ProjectId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="150" />
+    <Property Name="Deadline" Type="datetime" />
+    <Property Name="Descripition" Type="varchar(max)" />
+    <Property Name="ProjectFile" Type="varchar" MaxLength="150" />
+    <Property Name="PostedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RequestMaster">
+    <Key>
+      <PropertyRef Name="RequestId" />
+    </Key>
+    <Property Name="RequestId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RequestedFor" Type="int" />
+    <Property Name="RequestMsg" Type="varchar" MaxLength="300" />
+    <Property Name="RequestedBy" Type="varchar" MaxLength="150" />
+    <Property Name="RequestDt" Type="datetime" />
+    <Property Name="Status" Type="bit" />
+  </EntityType>
+  <EntityType Name="TaskMaster">
+    <Key>
+      <PropertyRef Name="TaskId" />
+    </Key>
+    <Property Name="TaskId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ForDeveloper" Type="varchar" MaxLength="150" />
+    <Property Name="ForDate" Type="datetime" />
+    <Property Name="TaskTitle" Type="varchar" MaxLength="150" />
+    <Property Name="TaskDescription" Type="varchar(max)" />
+    <Property Name="TaskFile" Type="varchar" MaxLength="250" />
+    <Property Name="UploadedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="UploadCodeMaster">
+    <Key>
+      <PropertyRef Name="UploadId" />
+    </Key>
+    <Property Name="UploadId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="200" />
+    <Property Name="Descripition" Type="varchar(max)" />
+    <Property Name="UploadedBy" Type="varchar" MaxLength="150" />
+    <Property Name="CodeFileName" Type="varchar" MaxLength="150" />
+    <Property Name="UploadedOn" Type="datetime" />
+  </EntityType>
+  <EntityType Name="WorkReportMaster">
+    <Key>
+      <PropertyRef Name="ReportId" />
+    </Key>
+    <Property Name="ReportId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="200" />
+    <Property Name="Description" Type="varchar" MaxLength="200" />
+    <Property Name="WorkDate" Type="datetime" />
+    <Property Name="IsHelpNeeded" Type="bit" />
+    <Property Name="SubmittedBy" Type="varchar" MaxLength="150" />
+    <Property Name="SubmittedOn" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_FeedbackMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="FeedbackMaster" Type="Self.FeedbackMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="FeedbackMaster">
+        <PropertyRef Name="Developerid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="RequestMaster" Type="Self.RequestMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="RequestMaster">
+        <PropertyRef Name="RequestedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RequestMaster_ProjectMaster">
+    <End Role="ProjectMaster" Type="Self.ProjectMaster" Multiplicity="0..1" />
+    <End Role="RequestMaster" Type="Self.RequestMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProjectMaster">
+        <PropertyRef Name="ProjectId" />
+      </Principal>
+      <Dependent Role="RequestMaster">
+        <PropertyRef Name="RequestedFor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TaskMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="TaskMaster" Type="Self.TaskMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="TaskMaster">
+        <PropertyRef Name="ForDeveloper" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UploadCodeMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="UploadCodeMaster" Type="Self.UploadCodeMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="UploadCodeMaster">
+        <PropertyRef Name="UploadedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkReportMaster_DeveloperMaster">
+    <End Role="DeveloperMaster" Type="Self.DeveloperMaster" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="WorkReportMaster" Type="Self.WorkReportMaster" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeveloperMaster">
+        <PropertyRef Name="Email_Id" />
+      </Principal>
+      <Dependent Role="WorkReportMaster">
+        <PropertyRef Name="SubmittedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="WorkTechHubDBModelStoreContainer">
+    <EntitySet Name="DeveloperMaster" EntityType="Self.DeveloperMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EnquiryMaster" EntityType="Self.EnquiryMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FeedbackMaster" EntityType="Self.FeedbackMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginMaster" EntityType="Self.LoginMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NotificationMaster" EntityType="Self.NotificationMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProjectMaster" EntityType="Self.ProjectMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RequestMaster" EntityType="Self.RequestMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TaskMaster" EntityType="Self.TaskMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UploadCodeMaster" EntityType="Self.UploadCodeMaster" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkReportMaster" EntityType="Self.WorkReportMaster" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_FeedbackMaster_DeveloperMaster" Association="Self.FK_FeedbackMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMaster" />
+      <End Role="FeedbackMaster" EntitySet="FeedbackMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestMaster_DeveloperMaster" Association="Self.FK_RequestMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMaster" />
+      <End Role="RequestMaster" EntitySet="RequestMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RequestMaster_ProjectMaster" Association="Self.FK_RequestMaster_ProjectMaster">
+      <End Role="ProjectMaster" EntitySet="ProjectMaster" />
+      <End Role="RequestMaster" EntitySet="RequestMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TaskMaster_DeveloperMaster" Association="Self.FK_TaskMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMaster" />
+      <End Role="TaskMaster" EntitySet="TaskMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UploadCodeMaster_DeveloperMaster" Association="Self.FK_UploadCodeMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMaster" />
+      <End Role="UploadCodeMaster" EntitySet="UploadCodeMaster" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkReportMaster_DeveloperMaster" Association="Self.FK_WorkReportMaster_DeveloperMaster">
+      <End Role="DeveloperMaster" EntitySet="DeveloperMaster" />
+      <End Role="WorkReportMaster" EntitySet="WorkReportMaster" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

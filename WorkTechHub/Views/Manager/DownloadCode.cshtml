@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "DownloadCode";
+    Layout = "~/Views/shared/Common_Manager_Layout.cshtml";
+}
+
+@using WorkTechHub.Models
+@model IEnumerable<UploadCodeMaster>
+
+<style>
+    #head{
+        background-color: #F3E5F5;
+    }
+     #data{
+        background-color: #F3E5F5;
+    }
+</style>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 mt-5">
+        <h1 class="text-center pt-2 pb-1 " style="background-color: #AB47BC; color:#FFF; border-radius:10px 10px 0px 0px ;">View Code</h1>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 table-responsive " style=" padding-top: 10px; padding-bottom: 10px;  margin-bottom: 20px;">
+
+        <table class="table table-striped table-bordered" style="border: 1px solid #9C27B0;">
+            <tr>
+                <th id="head">Upload Id</th>
+                <th id="head">Title</th>
+                <th id="head">Description</th>
+                <th id="head">Uploaded By</th>
+                <th id="head">Code File Name</th>
+                <th id="head">Uploaded On</th>
+                <th id="head">Download</th>
+            </tr>
+            @{
+                foreach (UploadCodeMaster um in Model)
+                {
+                    <tr>
+                        <td id="data"> @um.UploadId</td>
+                        <td id="data" > @um.Title</td>
+                        <td id="data">@um.Descripition</td>
+                        <td id="data" >@um.UploadedBy</td>
+                        <td id="data" >@um.CodeFileName</td>
+                        <td id="data" >@um.UploadedOn</td>
+                        <td id="data" >
+                            <a href="/Manager/DownloadCode1?fname=@um.CodeFileName">
+                                <span class=" fa fa-file fa-download text-center" style="cursor:pointer; margin-left:30px; padding-top:20px;" title="Download"></span>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+
+

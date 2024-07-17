@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "MyProjects";
+    Layout = "~/Views/shared/Common_Manager_Layout.cshtml";
+}
+
+
+@using WorkTechHub.Models
+@model IEnumerable<ProjectMaster>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 mt-5">
+        <h1 class="text-center pt-2 pb-1 " style="background-color: #AB47BC; color:#FFF; border-radius:10px 10px 0px 0px ;">My project</h1>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 table-responsive">
+
+        <table class="table table-striped table-bordered " style="border:1px solid #9C27B0; ">
+            <tr>
+                <th class="text-center ">Project Id</th>
+                <th class="text-center ">Title </th>
+                <th class="text-center ">Deadline</th>
+                <th class="text-center ">Description</th>
+
+                <th class="text-center ">UploadDate</th>
+            </tr>
+            @{
+
+                foreach (ProjectMaster pm in Model)
+                {
+
+                    <tr>
+                        <td class="text-center " style="background-color: #F3E5F5">@pm.ProjectId</td>
+                        <td style="background-color: #F3E5F5">@pm.Title</td>
+                        <td class="text-center " style="background-color: #F3E5F5">@pm.Deadline</td>
+                        <td style="background-color: #F3E5F5">@pm.Descripition</td>
+                        <td class="text-center " style="background-color: #F3E5F5">@pm.PostedOn</td>
+                    </tr>
+                }
+
+
+            }
+        </table>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+

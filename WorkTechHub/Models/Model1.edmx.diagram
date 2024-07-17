@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3600f6ee75984015b51aecdb1272ee35" Name="Diagram1">
+        <EntityTypeShape EntityType="WorkTechHubDBModel.DeveloperMaster" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.EnquiryMaster" Width="1.5" PointX="5.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.FeedbackMaster" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.LoginMaster" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.NotificationMaster" Width="1.5" PointX="5.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.ProjectMaster" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.RequestMaster" Width="1.5" PointX="6" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.TaskMaster" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.UploadCodeMaster" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorkTechHubDBModel.WorkReportMaster" Width="1.5" PointX="3" PointY="16.625" IsExpanded="true" />
+        <AssociationConnector Association="WorkTechHubDBModel.FK_FeedbackMaster_DeveloperMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkTechHubDBModel.FK_RequestMaster_DeveloperMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkTechHubDBModel.FK_TaskMaster_DeveloperMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkTechHubDBModel.FK_UploadCodeMaster_DeveloperMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkTechHubDBModel.FK_WorkReportMaster_DeveloperMaster" ManuallyRouted="false" />
+        <AssociationConnector Association="WorkTechHubDBModel.FK_RequestMaster_ProjectMaster" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

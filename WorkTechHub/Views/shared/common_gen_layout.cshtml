@@ -1,0 +1,138 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script src="~/content/javascript/jquery-3.7.1.min.js"></script>
+    <script src="~/content/Bootstrap/js/bootstrap.min.js"></script>
+    <link href="~/content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/content/Css/stylesheet1.css" rel="stylesheet" />
+    <title>common_gen_layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+          integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container-fluid">
+        <!--Logo session start-->
+        <div class="row " style="background: #0B0A33; opacity:0.9;  ">
+            <div class="col-sm-2 logo">
+                <a href="/General/AboutUs"><img src="~/content/images/glow-removebg-preview.png" height="115" width="130" /></a>
+            </div>
+            <!--Logo session end-->
+            <!--Menu start-->
+            <div class="col-sm-10">
+                <nav class="navbar navbar-expand-lg navbar-light  mt-3 " style="border-radius:30px 0px 30px;">
+                    <div class="container-fluid ">
+
+                        <button class="navbar-toggler text-bg-light " type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item ">
+
+                                    @Html.ActionLink("Home", "Home", "GeneralZone", new { @class = "nav-link " })
+
+                                </li>
+
+                                <li class="nav-item ">
+
+                                    @Html.ActionLink("About", "Aboutus", "GeneralZone", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+
+                                    @Html.ActionLink("Trending Projects", "TrendingProject", "GeneralZone", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+                                    @Html.ActionLink("Developer Sign Up", "DeveloperSignup", "GeneralZone", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+                                    @Html.ActionLink("ContactUs", "Contact", "GeneralZone", new { @class = "nav-link " })
+                                </li>
+                                <li class="nav-item">
+                                    @Html.ActionLink("Login", "LogIn", "GeneralZone", new { @class = "nav-link " })
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--Menu End-->
+
+        </div>
+        <div class="row main ">
+            <div class="col-sm-12">
+                @RenderBody()
+
+            </div>
+        </div>
+        <br />
+        <!--Footer Part start-->
+
+        <div class="row  mt-2 pt-4 bg-dark">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-4 pt-2">
+                <h6><b style="color:#FFF">WorkTechHub</b></h6><br />
+                <span>
+                    <p>
+                        WorkTechHub Near TD college Jaunpur<br />
+                        Jaunpur,222001<br />
+                        Uttar Pradesh
+                    </p>
+                </span>
+                <span>
+                    <p><b>Phone:</b> 9569683207</p>
+                    <b style="color:#FFF">Email:</b><a href="mailto:amit974403727250@gmail.com" target="_blank" style="text-decoration:none; "> WorkTechHub@gmail.com </a>
+                </span>
+            </div>
+            <div class="col-sm-3 pt-2">
+                <h6><b style="color:#FFF">Useful Links</b></h6>
+                <span style="margin-left:50px">
+                    <ul>
+                        <li><a href="/General/Home">Home</a></li>
+                        <br />
+                        <li><a href="/General/AboutUs">About Us</a></li>
+                        <br />
+                        <li>
+                            <a href="/General/TrendingProject"> Trending Project</a>
+                        </li>
+                        <br>
+                        <li><a href="/General/DeveloperSignup">Developer Registration</a></li>
+                        <br />
+                        <li><a href="/General/Login">Login</a></li>
+                    </ul>
+                </span>
+            </div>
+            <div class="col-sm-4 pt-2">
+                <h6><b style="color:#FFF">Our Social Network</b></h6><br />
+                <span>
+                    <p class="" style="color:#FFF;">At WorkTechHub, we believe in the power of community and staying connected with our valued users. Join us on our social media platforms to stay updated.</p>
+                    <a href="https://www.facebook.com/profile.php?id=100042495376331&mibextid=ZbWKwL" target="_blank"> <i class="fa-brands fa-facebook fa-2xl" id="icon2" style=" color: #EEEEEE;"></i></a>
+                    <a href="https://instagram.com/its_amit_yadauvanshi?igshid=YTQwZjQ0NmI0OA==" target="_blank"><i class="fa-brands fa-instagram fa-2xl" style="padding-left: 10px; color: #EEEEEE;" id="icon2"></i></a>
+                    <a href="https://twitter.com/Er_amit_yadav11" target="_blank"><i class="fa-brands fa-twitter fa-2xl" style="padding-left: 10px; color: #EEEEEE; " id="icon2"></i></a>
+                    <a href="https://wa.me/19569683207" target="_blank"><i class="fa-brands fa-whatsapp fa-2xl" style="padding-left: 10px; color: #EEEEEE; " id="icon2"></i></a>
+                    <a href="https://www.linkedin.com/in/amit-kumar-yadav-69923828a" target="_blank"><i class="fa-brands fa-linkedin fa-2xl " id="icon2" style="padding-left: 10px; color: #EEEEEE;"></i></a><br /><br />
+                    <a href="/General/Contact"><input type="button" value="Contact Us" id="cbtn" /></a>
+                </span>
+            </div>
+        </div>
+        <div class="row  text-center pt-3" style="color:aliceblue; min-height:50px; background-color:black;">
+            <div class="col-sm-6">Copyright © WorkTechHub 2023. All Rights Reserved.</div>
+            <div class="col-sm-6">Design & Developed by <a href="/General/myintro" style="text-decoration:none; ">Er. Amit Kumar Yadav</a></div>
+        </div>
+
+        <!--Footer Part end-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,113 @@
+﻿
+@{
+    ViewBag.Title = "SendEmail";
+    Layout = "~/Views/shared/Common_Manager_Layout.cshtml";
+}
+<style>
+    .txt1 {
+        border-radius: 30px;
+        height: 55px;
+    }
+
+        .txt1:hover {
+            border: 3px solid #E0E0E0;
+        }
+
+    .txt2 {
+        border-radius: 30px;
+    }
+
+        .txt2:hover {
+            border: 2px solid #E0E0E0;
+        }
+
+    .feed {
+        background-color: #E3C3E9;
+        border-radius: 15px;
+        border: 2px solid #8B4E96;
+    }
+
+    .btn {
+        height: 45px;
+        width: 150px;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+    }
+
+        .btn:hover {
+            color: white;
+            transform: scale(0.9);
+        }
+        .err{
+            color:red;
+        }
+</style>
+
+<script>
+    $(document).ready(function () {
+        $("#btnsubmit").click(function () {
+            var email, desc, sub, res = true;
+            //Reading values of all control
+            email = $("#temail").val().trim();
+            desc = $("#tdesc").val().trim();
+            sub = $("#tsub").val().trim();
+            //clear old error
+            $(".err").remove();
+            //Validate email
+            if (email.length == 0) {
+                $("#temail").after("<span class='err'>Please enter your email.</span>");
+                res = false;
+            }
+
+            //Validate Description
+            if (desc.length == 0) {
+                $("#tdesc").after("<span class='err'>Please write description.</span>");
+                res = false;
+            }
+            else if (desc.length < 10) {
+                $("#tdesc").after("<span class='err'>Description must be contain minimum 10 character.</span>");
+                res = false;
+            }
+            if (sub.length == 0) {
+                $("#tsub").after("<span class='err'>Please write subject.</span>");
+                res = false;
+            }
+            else if (sub.length < 5) {
+                $("#tsub").after("<span class='err'>Subject must be contain minimum 5 character.</span>");
+                res = false;
+            }
+            return res;
+        });
+    });
+</script>
+
+<div class="row">
+
+
+    <div class="col-sm-1"></div>
+    <div class="col-md-6">
+        <img src="~/content/images/Feedback (2).png" min-height="500px" width="90%" />
+    </div>
+    <div class="col-md-4  mt-4 mb-4 feed">
+        <h1 class="card-header text-primary text-center">Send Email</h1>
+        <hr />
+        <p style="text-align:center; color:red;">@ViewBag.Message</p>
+        <form action="/Manager/SendEmail" method="post" class="form1">
+            <div class="mb-3 ">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="temail" class="form-control txt1" placeholder="Enter email Address" name="SendTo">
+            </div>
+            <div class="mb-3 ">
+                <label for="for subject" class="form-label">Subject</label>
+                <input type="text" id="tsub" class="form-control txt1" placeholder="Enter subject" name="Subject">
+            </div>
+            <div class="mb-3">
+                <label for="Feedback title" class="form-label">Message</label>
+                <textarea class="form-control txt2 " rows="4 " id="tdesc" name="Message" placeholder="Enter message"></textarea>
+            </div>
+            <input type="submit" id="btnsubmit" class="btn btn-primary mb-3" />
+        </form>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+

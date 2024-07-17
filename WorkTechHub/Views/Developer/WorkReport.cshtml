@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "WorkReport";
+    Layout = "~/Views/shared/Common_Developer_Layput.cshtml";
+}
+
+
+<style>
+    .uptxt1 {
+        border-radius: 30px;
+        height: 55px;
+    }
+
+        .uptxt1:hover {
+            border: 3px solid #E0E0E0;
+        }
+
+    .uptxt2 {
+        border-radius: 30px;
+    }
+
+        .uptxt2:hover {
+            border: 3px solid #E0E0E0;
+        }
+
+    .uploadfeed {
+        background-color: #E3C3E9;
+        border-radius: 15px;
+        border: 2px solid #8B4E96;
+        height: 570px;
+    }
+
+    .upbtn {
+        height: 45px;
+        width: 150px;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+    }
+
+        .upbtn:hover {
+            color: white;
+            transform: scale(0.9);
+        }
+        .err{
+            color:red;
+        }
+</style>
+<script>
+    $(document).ready(function () {
+        $("#btnsubmit").click(function () {
+            var title, desc,date, res = true;
+            //Reading values of all control
+            title = $("#ttext").val().trim();
+            desc = $("#tdesc").val().trim();
+            date = $("#tdate").val().trim();
+            //clear old error
+            $(".err").remove();
+            //Validate title
+            if (title.length == 0) {
+                $("#ttext").after("<span class='err'>Please enter title.</span>");
+                res = false;
+            }
+            else if (title.length < 4) {
+                $("#ttext").after("<span class='err'>Title must be contain minimum 4 character.</span>");
+                res = false;
+            }
+            //Validate Description
+            if (desc.length == 0) {
+                $("#tdesc").after("<span class='err'>Please write description.</span>");
+                res = false;
+            }
+            else if (title.length < 10) {
+                $("#tdesc").after("<span class='err'>Description must be contain minimum 10 character.</span>");
+                res = false;
+            }
+           //validate date
+            if (date.length == 0) {
+                $("#tdate").after("<span class='err'>Please enter date.</span>");
+                res = false;
+            }
+            return res;
+        });
+    });
+</script>
+
+<div class="row mb-5">
+
+
+    <div class="col-sm-1"></div>
+    <div class="col-md-6">
+        <img src="~/content/images/Report-amico.png" min-height="600px" width="100%" />
+    </div>
+
+    <div class="col-md-4  mt-5 mb-5 uploadfeed">
+        <h2 class="card-header text-primary text-center">Work Report</h2>
+        <h6 class="text-danger text-center">@ViewBag.Message</h6>
+        <hr />
+
+
+        <form action="/Developer/WorkReport" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="Title of the work" class="form-label">Title</label>
+                <input type="text" class="form-control uptxt1" id="ttext" placeholder="Title of the work/project" name="Title">
+            </div>
+            <div class="mb-3">
+                <label for="Descripition of the work" class="form-label">Descripition</label>
+                <textarea class="form-control uptxt2" name="Description" id="tdesc" rows="3" placeholder="Description of the work"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="Work Date" class="form-label">Work Date</label>
+                <input type="date" id="tdate" class="form-control uptxt1 pt-3" name="WorkDate" />
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="True" id="flexCheckChecked" name="IsHelpNeeded" checked>
+                <label class="form-check-label" for="flexCheckChecked">Is any help needed ? </label>
+            </div>
+            <input type="submit" id="btnsubmit" value="Upload" class="btn btn-primary mt-2 mb-3 upbtn" />
+        </form>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+

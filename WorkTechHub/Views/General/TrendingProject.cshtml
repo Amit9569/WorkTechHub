@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewBag.Title = "TrendingProject";
+    Layout = "~/Views/shared/common_gen_layout.cshtml";
+}
+
+@using WorkTechHub.Models
+@model IEnumerable<ProjectMaster>
+<style>
+    .box {
+        transition: 0.5s ease-in-out
+    }
+
+        .box:hover {
+            transform: scale(0.9);
+        }
+</style>
+
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+
+        <div class="row mt-5 mb-5">
+            @{
+                foreach (ProjectMaster pm in Model)
+                {
+                    <div class="col-sm-4 mt-4 box">
+                        <div class="card">
+                            <h5 class="card-header" style="color: #fff; background-color: #54B4D3; "> @pm.Title </h5>
+                            <div class="card-body" style="min-height:150px;">
+                                <p class="card-title text-dark"><span style="color: #3B71CA;"><b>Description</b>: </span>@pm.Descripition</p>
+                                <p class="card-text text-dark"><span style="color: #D32F2F;"><b>Deadline: </b></span>@pm.Deadline</p>
+                                <p class="card-text text-dark"><span style="color: #3B71CA;"><b>Posted On: </b></span>@pm.PostedOn</p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+
+
+
+

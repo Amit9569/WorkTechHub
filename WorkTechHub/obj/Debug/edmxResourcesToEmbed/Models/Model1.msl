@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="WorkTechHubDBModelStoreContainer" CdmEntityContainer="WorkTechHubDBEntities1">
+    <EntitySetMapping Name="DeveloperMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.DeveloperMaster">
+        <MappingFragment StoreEntitySet="DeveloperMaster">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email_Id" ColumnName="Email_Id" />
+          <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+          <ScalarProperty Name="Qualification" ColumnName="Qualification" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="ProfilePic" ColumnName="ProfilePic" />
+          <ScalarProperty Name="Registered_on" ColumnName="Registered_on" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EnquiryMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.EnquiryMaster">
+        <MappingFragment StoreEntitySet="EnquiryMaster">
+          <ScalarProperty Name="Enq_Id" ColumnName="Enq_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="MobNo" ColumnName="MobNo" />
+          <ScalarProperty Name="Query" ColumnName="Query" />
+          <ScalarProperty Name="Enq_DT" ColumnName="Enq_DT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FeedbackMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.FeedbackMaster">
+        <MappingFragment StoreEntitySet="FeedbackMaster">
+          <ScalarProperty Name="Fid" ColumnName="Fid" />
+          <ScalarProperty Name="Feedback_Title" ColumnName="Feedback_Title" />
+          <ScalarProperty Name="Feedback_detail" ColumnName="Feedback_detail" />
+          <ScalarProperty Name="Developerid" ColumnName="Developerid" />
+          <ScalarProperty Name="MsgDT" ColumnName="MsgDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LoginMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.LoginMaster">
+        <MappingFragment StoreEntitySet="LoginMaster">
+          <ScalarProperty Name="Email_Id" ColumnName="Email_Id" />
+          <ScalarProperty Name="Pass_word" ColumnName="Pass_word" />
+          <ScalarProperty Name="Utype" ColumnName="Utype" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NotificationMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.NotificationMaster">
+        <MappingFragment StoreEntitySet="NotificationMaster">
+          <ScalarProperty Name="Nid" ColumnName="Nid" />
+          <ScalarProperty Name="NMsg" ColumnName="NMsg" />
+          <ScalarProperty Name="NDT" ColumnName="NDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProjectMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.ProjectMaster">
+        <MappingFragment StoreEntitySet="ProjectMaster">
+          <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Deadline" ColumnName="Deadline" />
+          <ScalarProperty Name="Descripition" ColumnName="Descripition" />
+          <ScalarProperty Name="ProjectFile" ColumnName="ProjectFile" />
+          <ScalarProperty Name="PostedOn" ColumnName="PostedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.RequestMaster">
+        <MappingFragment StoreEntitySet="RequestMaster">
+          <ScalarProperty Name="RequestId" ColumnName="RequestId" />
+          <ScalarProperty Name="RequestedFor" ColumnName="RequestedFor" />
+          <ScalarProperty Name="RequestMsg" ColumnName="RequestMsg" />
+          <ScalarProperty Name="RequestedBy" ColumnName="RequestedBy" />
+          <ScalarProperty Name="RequestDt" ColumnName="RequestDt" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.TaskMaster">
+        <MappingFragment StoreEntitySet="TaskMaster">
+          <ScalarProperty Name="TaskId" ColumnName="TaskId" />
+          <ScalarProperty Name="ForDeveloper" ColumnName="ForDeveloper" />
+          <ScalarProperty Name="ForDate" ColumnName="ForDate" />
+          <ScalarProperty Name="TaskTitle" ColumnName="TaskTitle" />
+          <ScalarProperty Name="TaskDescription" ColumnName="TaskDescription" />
+          <ScalarProperty Name="TaskFile" ColumnName="TaskFile" />
+          <ScalarProperty Name="UploadedOn" ColumnName="UploadedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UploadCodeMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.UploadCodeMaster">
+        <MappingFragment StoreEntitySet="UploadCodeMaster">
+          <ScalarProperty Name="UploadId" ColumnName="UploadId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Descripition" ColumnName="Descripition" />
+          <ScalarProperty Name="UploadedBy" ColumnName="UploadedBy" />
+          <ScalarProperty Name="CodeFileName" ColumnName="CodeFileName" />
+          <ScalarProperty Name="UploadedOn" ColumnName="UploadedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WorkReportMasters">
+      <EntityTypeMapping TypeName="WorkTechHubDBModel.WorkReportMaster">
+        <MappingFragment StoreEntitySet="WorkReportMaster">
+          <ScalarProperty Name="ReportId" ColumnName="ReportId" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="WorkDate" ColumnName="WorkDate" />
+          <ScalarProperty Name="IsHelpNeeded" ColumnName="IsHelpNeeded" />
+          <ScalarProperty Name="SubmittedBy" ColumnName="SubmittedBy" />
+          <ScalarProperty Name="SubmittedOn" ColumnName="SubmittedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

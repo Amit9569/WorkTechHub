@@ -1,0 +1,32 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace WorkTechHub.App_Code
+{
+    public class Cryptography
+    {
+        internal string EncryptMyPassword(string plainText)
+        {
+            string EncryptedText = "";
+            int ASCIIValue, x;
+            char ch, newCh;
+            for (x = 0; x < plainText.Length; x++)
+            {
+                ch = plainText[x];
+                ASCIIValue = (int)ch;
+                if (ASCIIValue >= 65 && ASCIIValue <= 90)
+                    ASCIIValue = 65 + 90 - ASCIIValue;
+                else if (ASCIIValue >= 97 && ASCIIValue <= 122)
+                    ASCIIValue = ASCIIValue - 97 + 65;
+                else if (ASCIIValue >= 48 && ASCIIValue <= 57)
+                    ASCIIValue = ASCIIValue + 1;
+                newCh = (char)ASCIIValue;
+                EncryptedText = EncryptedText + newCh;
+
+            }
+            return EncryptedText;
+        }
+    }
+}

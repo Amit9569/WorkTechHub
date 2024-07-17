@@ -1,0 +1,16 @@
+﻿
+.nav-item {
+    margin-left: 40px;
+    font-size: 17px;
+    text-decoration: none;
+    
+    
+}
+
+.nav-link {
+    color:#FFF;
+}
+
+    .nav-link:hover {
+        color: #3B71CA;
+    }

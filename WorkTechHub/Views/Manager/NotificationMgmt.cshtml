@@ -1,0 +1,155 @@
+﻿
+@{
+    ViewBag.Title = "NotificationMgmt";
+    Layout = "~/Views/shared/Common_Manager_Layout.cshtml";
+}
+@using WorkTechHub.Models
+@model IEnumerable<NotificationMaster>
+
+
+<style>
+    .txt1 {
+        border-radius: 30px;
+        height: 55px;
+    }
+
+        .txt1:hover {
+            border: 3px solid #E0E0E0;
+        }
+
+    .txt2 {
+        border-radius: 30px;
+    }
+
+        .txt2:hover {
+            border: 1px solid #E0E0E0;
+        }
+
+    .feed {
+        background-color: #E3C3E9;
+        border-radius: 15px;
+        border: 2px solid #8B4E96;
+    }
+
+    .btn {
+        height: 45px;
+        width: 150px;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+    }
+
+        .btn:hover {
+            color: white;
+            transform: scale(0.9);
+        }
+        .err{
+            color:red;
+        }
+</style>
+<script>
+    $(document).ready(function () {
+        $("#btnsubmit").click(function () {
+            var desc, res = true;
+            desc = $(#tdesc).val().trim();
+            //clear old error
+            $(".err").remove();
+            //Validate Description
+            if (desc.length == 0) {
+                $("#tdesc").after("<span class='err'>Please write Notification message.</span>");
+                res = false;
+            }
+            else if (desc.length < 10) {
+                $("#tdesc").after("<span class='err'>Notification must be contain minimum 10 character.</span>");
+                res = false;
+            }
+            return res;
+        });
+    });
+</script>
+  <div class="row mb-5">
+
+
+    <div class="col-sm-1"></div>
+    <div class="col-md-5">
+      <img  src="~/content/images/notification.png" min-height="100%" width="80%"/>  
+    </div>
+    <div class="col-md-4  mt-5 mb-6 feed" style=" border-radius:10px; height:; ">
+        <h2 class="card-header text-primary text-center">Upload Notification</h2><hr />
+        <h6 style="text-align: center; color:red;">@ViewBag.message</h6>
+
+        <form action="/Manager/NotificationMgmt" method="post">
+            
+            <div class="mb-3">
+                <label for="Feedback title" class="form-label">Notification</label>
+                <textarea class="form-control txt2 pt-5" id="tdesc" rows="4" name="NMsg" placeholder="Type notification  here......"></textarea>
+            </div>
+            <input type="submit" id="btnsubmit" value="save" class="btn btn-primary mt-2 mb-3" />
+        </form>
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+<hr />
+<!--Display Notification-->
+<div class="row">
+    
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 mt-5">
+        <h1 class="text-center pt-2 pb-1 " style="background-color: #AB47BC; color:#FFF; border-radius:10px 10px 0px 0px ;">Notification Management</h1>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10 table-responsive" style=" border-radius:10px;  padding-bottom: 20px;  margin-bottom: 20px;">
+     
+        <table class="table table-striped table-bordered " style="border: 1px solid #9C27B0;">
+            <tr>
+                <th>Notification Id</th>
+                <th>Notification Text</th>
+                <th>Added on</th>
+                <th>Delete</th>
+            </tr>
+            @{
+                foreach (NotificationMaster nm in Model)
+                {
+                    <tr>
+                        <td>@nm.Nid</td>
+                        <td>@nm.NMsg</td>
+                        <td>@nm.NDT</td>
+                        <td>
+                            <span class=" del fa-solid fa-trash-can text-danger text-center pt-2" style="cursor:pointer; padding-left:30px;" title="Remove"></span>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+<script>
+    
+        $(document).ready(function(){
+            $(".del").click(function () {
+                var r = $(this).parents("tr");
+                var nid = r.find("td").first().text().trim();
+                var obj = { NID: nid };
+
+                //AJEX calling
+
+                $.getJSON("/Manager/DeleteNoti", obj, function (res) {
+                    if (res == "SUCCESS") {
+                        alert("Notification deleted Successfully");
+                        r.slideUp(1200);
+                    }
+                    else {
+                        alert("Sorry! unable to delete notification.");
+                    }
+                });
+            });
+    });
+</script>
+            
+
+
+
+
+

@@ -1,0 +1,269 @@
+﻿
+@{
+    ViewBag.Title = "DeveloperSignUp";
+    Layout = "~/Views/shared/common_gen_layout.cshtml";
+}
+<link href="~/content/Css/developersinup.css" rel="stylesheet" />
+<style>
+    .myform div {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .myform {
+        border-radius: 30px;
+        background-color: #F9F9FA;
+        min-height: 400px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 15px;
+        margin-bottom: 30px;
+        border: 1px solid #54B4D3;
+    }
+
+    .inp1 {
+        min-height: 60px;
+        min-width: 30%;
+        border-radius: 30px;
+        border: 1px solid #90CAF9;
+    }
+
+        .inp1:hover {
+            border: 1px solid #0D47A1;
+        }
+
+
+    h3 {
+        color: black;
+    }
+
+    .btnreg {
+        border-radius: 10px;
+    }
+
+    .err {
+        color: red;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $("#BtnRefresh").click(function () {
+            $.getJSON("/General/GetNewCaptchaByAjax", null, function (res) {
+                $("#ImgCaptcha").attr("src", "/content/Captcha/" + res);
+            });
+        });
+        //Validate terms and condition
+        $("#chkterms").change(function () {
+            var x = $(this).prop("checked");
+            if (x == true)
+                $("#btnsave").prop("disabled", false);
+            else
+                $("#btnsave").prop("disabled", true);
+        });
+        //validate registration form
+        $("#btnsave").click(function () {
+            var name, mob, email, pass, cpass, quali, desig, picture, address, code, res = true;
+            //Reading values of all control
+            name = $("#tname").val().trim();
+            mob = $("#tmob").val().trim();
+            email = $("#temail").val().trim();
+            pass = $("#tpass").val().trim();
+            cpass = $("#tcpass").val().trim();
+            quali = $("#dquali").val().trim();
+            desig = $("#ddesig").val().trim();
+            picture = $("#pic").val().trim();
+            address = $("#taddress").val().trim();
+            code = $("#tcaptcha").val().trim();
+            //clear old error
+            $(".err").remove();
+            //validate name
+            if (name.length == 0) {
+                $("#tname").after("<span class='err'>Please enter your name.</span>");
+                res = false;
+            }
+            else if (name.length < 3)
+            {
+                $("#tname").after("<span class='err'>Please enter a valid name.</span>");
+                res = false;
+            }
+            //validate mobile no
+            if (mob.length == 0) {
+                $("#tmob").after("<span class='err'>Please enter mobile number.</span>");
+                res = false;
+            }
+            else if (mob.length != 10) {
+                $("#tmob").after("<span class='err'>Mobile number must have exact 10 digit.</span>");
+                res = false;
+            }
+            else
+            {
+                var ascii = mob.charCodeAt(0);
+                if (!(ascii >= 54 && ascii <= 57))
+                {
+                    $("#tmob").after("<span class='err'>Please a valid mobile number.</span>");
+                    res = false;
+                }
+            }
+            //validate email
+            if (email.length == 0)
+            {
+                $("#temail").after("<span class='err'>Please enter your email.</span>");
+                res = false;
+            }
+            //validate qualification
+            if (quali.length == 0)
+            {
+                $("#dquali").after("<span class='err'>Please choose qualification.</span>");
+                res = false;
+            }
+            //validate designation
+            if (desig.length == 0) {
+                $("#ddesig").after("<span class='err'>Please choose your designation.</span>");
+                res = false;
+            }
+            //validate address
+            if (address.lenght == 0) {
+                $("#taddress").after("<span class='err'>Please enter your address.</span>");
+                res = false;
+            }
+            else {
+                var count = 0, x, ch;
+                for (x = 0; x < address.length; x++) {
+                    ch = address.charAt(x);
+                    if (ch == ' ' || ch == ',' || ch == '.' || ch == '-')
+                        count++;
+                }
+                if (count < 3) {
+                    $("#taddress").after("<span class='err'>Please enter your full address.</span>");
+                    res = false;
+                }
+            }
+            //validate picture
+            if (picture.length > 0)
+            {
+                var ext = picture.substring(picture.lastIndexOf('.')).toUpperCase();
+                if (!(ext== '.JPG' || ext== '.PNG' || ext=='.JPEG'))
+                {
+                    $("#pic").after("<span class='err'>Please choose a valid image file.</span>");
+                    res = false;
+                }
+            }
+            //validate password
+            if (pass.length == 0) {
+                $("#tpass").after("<span class='err'>Please enter your password.</span>");
+                res = false;
+            }
+            else if (pass.length < 5)
+            {
+                $("#tpass").after("<span class='err'>Password must have 5 characters.</span>");
+                res = false;
+            }
+            //validate confirm password
+            if (pass.length == 0) {
+                $("#tcpass").after("<span class='err'>Please confirm your password.</span>");
+                res = false;
+            }
+            else if (pass != cpass)
+            {
+                $("#tcpass").after("<span class='err'>Password and confirm password must be same.</span>");
+                res = false;
+            }
+            //validate captcha
+            if (code.length == 0) {
+                $("#tcaptcha").after("<span class='err'>Please enter captcha code.</span>");
+                res = false;
+            }
+            return res;
+        });
+    });
+    function message() {
+        var r;
+        r = confirm("Are you sure to reset your details.")
+        if (r == true) {
+            alert("Record deleted successfully.")
+        }
+        else {
+            alert("Record not deleted .")
+        }
+    }
+</script>
+<div class="row mt-5 " id="formback">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8" id="">
+        <p class=" mt-4 text-center" style="color:crimson;">@ViewBag.Message</p>
+        <form action="/General/DeveloperSignup" method="post" enctype="multipart/form-data">
+            <div class="row myform">
+                <h3 class="text-center">Developer Registration</h3>
+                <hr />
+                <div class="col-sm-6 ">
+                    <input type="text" name="Name" id="tname" placeholder="Enter your Name" class="form-control inp1" />
+                </div>
+                <div class="col-sm-6">
+                    <input type="email" name="Email_Id" id="temail" placeholder="Email Id:" class="form-control inp1" />
+                </div>
+                <div class="col-sm-6">
+                    <span class="form-control inp1 pt-3">
+                        Male<input type="radio" name="Gender" value="Male" checked="checked" />
+                        Female <input type="radio" name="Gender" value="Female" />
+                    </span>
+                </div>
+
+                <div class="col-sm-6 ">
+                    <input type="number" name="Mobile_No" id="tmob" placeholder="Mobile No:" class="form-control inp1" />
+                </div>
+                <div class="col-sm-6 ">
+                    @Html.DropDownList("Qualification", null, "Qualification", new { @class = "form-control inp1", id = "dquali" })
+                </div>
+                <div class="col-sm-6 ">
+                    @Html.DropDownList("Designation", null, "Designation", new { @class = "form-control inp1", id = "ddesig" })
+
+                </div>
+                <div class="col-sm-6">
+                    <input type="password" name="Pass_word" id="tpass" placeholder="Password:" class="form-control inp1" /><br />
+                    <input type="password" name="ConPass" id="tcpass" placeholder="Confirm password:" class="form-control inp1" />
+                </div>
+                <div class="col-sm-6">
+                    <textarea class="form-control inp1" name="Address" id="taddress" placeholder="Enter your address" rows="6"></textarea>
+                </div>
+                <div class="col-sm-6">
+                    <span class="form-control inp1">
+                        <img id="ImgCaptcha" width="80%" height="55px" src="~/content/Captcha/@ViewBag.CaptchaPicName" />
+                        <img id="BtnRefresh" width="10%" height="30px" style="cursor:pointer" title="refresh code" src="~/content/images/refresh1.png" />
+                    </span>
+                </div>
+                <div class="col-sm-6">
+                    <span class="form-control inp1 pt-3">
+                        Picture:
+                        <input type="file" id="pic" name="ProfilePic" />
+                    </span>
+                </div>
+                <div class="col-sm-6">
+                    <input type="text" name="TxtCaptcha" id="tcaptcha" placeholder="Type captcha" class="form-control inp1" />
+                </div>
+                <div class="col-sm-12">
+                    <input type="checkbox" id="chkterms" style="width:20px; height:20px;" />I agree from terms & Condition of <b>WorkTechHub</b>.
+                </div>
+
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
+                    <input type="submit" value="Register Now" class="btn btn-primary btnreg" id="btnsave" disabled="true" />
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2"></div>
+                <div class="col-sm-3">
+                    <input type="reset" value="Clear all" class="btn btn-danger btnreset" onclick="message()" />
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-6 mt-3">
+                    <h6>Already have an account?<a href="/General/Login" style="text-decoration:none;">Login Now</a></h6>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-sm-2"></div>
+</div>
+
+

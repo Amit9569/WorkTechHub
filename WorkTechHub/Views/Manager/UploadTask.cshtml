@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewBag.Title = "UploadTask";
+    Layout = "~/Views/shared/Common_Manager_Layout.cshtml";
+}
+
+<style>
+    .uptxt1 {
+        border-radius: 30px;
+        height: 50px;
+    }
+
+        .uptxt1:hover {
+            border: 3px solid #E0E0E0;
+        }
+
+    .uptxt2 {
+        border-radius: 30px;
+    }
+
+        .uptxt2:hover {
+            border: 3px solid #E0E0E0;
+        }
+
+    .uploadfeed {
+        background-color: #E3C3E9;
+        border-radius: 15px;
+        border: 2px solid #8B4E96;
+        min-height: 680px;
+    }
+
+    .upbtn {
+        height: 45px;
+        width: 150px;
+        border-radius: 30px;
+        transition: all 0.5s ease-in-out;
+    }
+
+        .upbtn:hover {
+            color: white;
+            transform: scale(0.9);
+        }
+        .err{
+            color:red;
+        }
+</style>
+<script>
+    $(document).ready(function () {
+        $("#btnsubmit").click(function () {
+            var title, desc, file,date, res = true;
+            //Reading values of all control
+            title = $("#ttext").val().trim();
+            desc = $("#tdesc").val().trim();
+            file = $("#tfile").val().trim();
+            date = $("#tdate").val().trim();
+            var fordevp = $(".tdevp").val().trim();
+            //clear old error
+            $(".err").remove();
+            //Validate title
+            if (title.length == 0) {
+                $("#ttext").after("<span class='err'>Please enter title.</span>");
+                res = false;
+            }
+            else if (title.length < 4) {
+                $("#ttext").after("<span class='err'>Title must be contain minimum 4 character.</span>");
+                res = false;
+            }
+            //Validate Description
+            if (desc.length == 0) {
+                $("#tdesc").after("<span class='err'>Please write description.</span>");
+                res = false;
+            }
+            else if (title.length < 10) {
+                $("#tdesc").after("<span class='err'>Description must be contain minimum 10 character.</span>");
+                res = false;
+            }
+            //validate file
+            if (file.length==0) {
+
+                    $("#tfile").after("<span class='err'>Please choose a valid file.</span>");
+                    res = false;
+            }
+            if (date.length == 0) {
+
+                $("#tdate").after("<span class='err'>Please enter date.</span>");
+                res = false;
+            }
+            //validate for developer
+            if (fordevp.length == 0) {
+                $(".tdevp").after("<span class='err'>Please choose developer.</span>");
+                res = false;
+            }
+            return res;
+        });
+    });
+</script>
+
+<div class="row">
+
+    <div class="col-sm-6 " style="margin-top:100px;">
+        <img src="~/content/images/log4.png" height:"700px"; width="100%;" />
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4 mt-5 mb-5  uploadfeed" style="border: 1px solid black;">
+        <h4 class="card-header text-primary text-center mt-3">Upload Today Task</h4><hr />
+        <p style="text-align:center; color:red;">@ViewBag.Message</p>
+        <form action="/Manager/UploadTask" method="post" enctype="multipart/form-data">
+            <label for="exampleFormControlInput1"  class="form-label">For Developer</label>
+            @Html.DropDownList("ForDeveloper", null, "ForDeveloper", new { @class = "form-control uptxt1 tdevp" })
+            <br />
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Date</label>
+                <input class="form-control uptxt1" type="date" id="tdate" name="ForDate">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Title</label>
+                <input type="text" class="form-control uptxt1" id="ttext" placeholder="Title" name="TaskTitle">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+                <textarea class="form-control uptxt1" id="tdesc" placeholder="Description of Upload" name="TaskDescription" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="upload project" class="form-label">Upload File Here</label>
+                <input type="file" id="tfile" class="form-control uptxt1 pt-3" name="ProjectFile" />
+            </div>
+
+            <input type="submit" id="btnsubmit" value="Save" class="btn btn-primary mt-2 mb-3 upbtn" />
+        </form>
+    </div>
+    <div class="col-sm-1"></div>
+</div>
+
+
+
+
+

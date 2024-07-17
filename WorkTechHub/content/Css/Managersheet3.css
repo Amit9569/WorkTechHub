@@ -1,0 +1,17 @@
+﻿
+
+.nav-item {
+    padding-left: 19px;
+    font-size: 15px;
+    text-decoration: none;
+    
+   
+}
+
+.nav-link {
+    color: #FFF;
+}
+
+    .nav-link:hover {
+        color: #3B71CA;
+    }
